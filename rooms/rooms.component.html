@@ -1,0 +1,46 @@
+<h1>3x3 Hotel</h1>
+
+
+
+<table>
+    <tr>
+        <th>Index</th>
+        <th>Room Number</th>
+        <th>Floor</th>
+        <th>Room type</th>
+        <th>Capacity</th>
+        <th>Has Balcony</th>
+        <th>Price per Night</th>
+        <th>Amenities</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+    </tr>
+    <tr *ngFor="let room of hotelRooms;let e=even let o=odd let i = index;"
+        [ngClass]="o? 'even':'odd'"
+        
+    >
+        <td>{{1+i}}</td>
+        <td>{{room.roomNumber}}</td>
+        <td>{{room.floor}}</td>
+        <td>{{room.type | titlecase}}</td>
+        <td>{{room.capacity}}</td>
+        <td>{{room.hasBalcony}}</td>
+        <td>{{room.pricePerNight | currency : 'GBP'}}</td>
+        <td>{{room.amenities }}</td>
+        <td>{{room.availableDates[0].startDate | date}}</td>
+        <td>{{room.availableDates[0].endDate | date : 'full'}}</td>
+        <td>{{o?"even":"odd"}}</td>
+    </tr>
+</table>
+
+
+<button  [disabled]="isReserveButtonEnable" 
+        (click)="handleClickReserveRoom()" 
+        [ngStyle]="{'display': reservedRooms.length == 6 ? 'none' : ''}"
+        class="reserve-room" >Reserve a room</button>
+
+<button  [disabled]="isCancelReserveButtonEnable" 
+        (click)="handleClickCancelReserveRoom()" 
+        [ngStyle]="{'display': reservedRooms.length == 0 ? 'none' : ''}"
+        class="cancel-reservation">Cancel reservation</button>
+<!-- https://restcountries.com/v3.1/all -->

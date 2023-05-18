@@ -1,0 +1,52 @@
+.even{
+    background-color: #7ce9fc;
+    color: #04045c;
+}
+.odd{
+    background-color:#04d1f6;
+    color: #04045c;
+    
+}
+.reserve-room:hover{
+    background-color: #E01F5F;
+    color: white;
+}
+.reserve-room{
+    transition: 0.3s;
+    text-align: center;
+    background-color: white;
+    font-size: small;
+    font-weight: 600;
+    margin: 5px;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-color: #E01F5F;
+    color: #E01F5F;
+    border-radius: 25px;
+}
+.cancel-reservation:hover{
+    background-color: #1FE0A0;
+    color: white; 
+}
+.cancel-reservation{
+    transition: 0.3s;
+    text-align: center;
+    background-color: white;
+    font-size: small;
+    font-weight: 600;
+    margin: 5px;
+    padding: 11px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-color: #1FE0A0;
+    color: #1FE0A0;
+    border-radius: 25px;
+}
+
+.disabledBtn{
+    background-color: #567189;
+    color:white;
+    border-color:whitesmoke;
+}
+
